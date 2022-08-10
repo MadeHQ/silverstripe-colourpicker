@@ -5,7 +5,7 @@ namespace MadeHQ\FieldType;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use MadeHQ\Forms\ColourPicker;
 
-class Colour extends DBVarchar
+class DBColour extends DBVarchar
 {
 
     private static $casting = array(

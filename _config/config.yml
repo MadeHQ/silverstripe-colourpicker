@@ -7,3 +7,9 @@ SilverStripe\Admin\LeftAndMain:
     - mademedia/silverstripe-cloudinary:client/dist/js/bundle.js
   extra_requirements_css:
     - mademedia/silverstripe-cloudinary:client/dist/styles/bundle.css
+
+SilverStripe\Core\Injector\Injector:
+  Colour:
+    class: MadeHQ\FieldType\DBColour
+  Color:
+    class: MadeHQ\FieldType\DBColour
