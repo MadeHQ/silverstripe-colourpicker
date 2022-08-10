@@ -10,10 +10,14 @@
 			"name": "ninty9notout",
 			"homepage": "https://github.com/ninty9notout",
 			"email": "ninty9notout@hotmail.co.uk"
+		},{
+			"name": "oilee80",
+			"homepage": "https://github.com/oilee80",
+			"email": "web-dev@new-it.co.uk"
 		}
 	],
 	"require": {
-		"silverstripe/admin": "1.1.x-dev"
+		"silverstripe/admin": "^1"
 	},
 	"autoload": {
         "psr-4": {"MadeHQ\\": "code/"}
