@@ -2,12 +2,6 @@
 Name: silverstripe-colourpicker
 ---
 
-SilverStripe\Admin\LeftAndMain:
-  extra_requirements_javascript:
-    - mademedia/silverstripe-cloudinary:client/dist/js/bundle.js
-  extra_requirements_css:
-    - mademedia/silverstripe-cloudinary:client/dist/styles/bundle.css
-
 SilverStripe\Core\Injector\Injector:
   Colour:
     class: MadeHQ\FieldType\DBColour
