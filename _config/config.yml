@@ -5,5 +5,4 @@ Name: silverstripe-colourpicker
 SilverStripe\Core\Injector\Injector:
   Colour:
     class: MadeHQ\FieldType\DBColour
-  Color:
-    class: MadeHQ\FieldType\DBColour
+
