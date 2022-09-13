@@ -1,7 +1,13 @@
 <?php
+
+namespace MadeHQ\Forms;
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\View\Requirements;
+
 /**
  * Colour input field.
- * 
+ *
  * @package forms
  * @subpackage fields-formattedinput
  */
@@ -18,11 +24,11 @@ class ColourPicker extends TextField
     {
         $this->addExtraClass("colourpickerinput");
 
-        Requirements::javascript(COLOURPICKER_DIR . "/thirdparty/jquery-minicolors/jquery.minicolors.min.js");
-        Requirements::css(COLOURPICKER_DIR . "/thirdparty/jquery-minicolors/jquery.minicolors.css");
+        Requirements::javascript('ninty9notout/colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.min.js');
+        Requirements::css('ninty9notout/colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.css');
 
-        Requirements::css(COLOURPICKER_DIR . "/css/colourpicker.css");
-        Requirements::javascript(COLOURPICKER_DIR . "/javascript/colourpicker.js");
+        Requirements::css('ninty9notout/colourpicker:client/dist/css/colourpicker.css');
+        Requirements::javascript('ninty9notout/colourpicker:client/dist/javascript/colourpicker.js');
 
         return parent::Field($properties);
     }

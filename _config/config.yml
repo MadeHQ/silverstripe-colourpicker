@@ -1,0 +1,8 @@
+---
+Name: silverstripe-colourpicker
+---
+
+SilverStripe\Core\Injector\Injector:
+  Colour:
+    class: MadeHQ\FieldType\DBColour
+
