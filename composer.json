@@ -15,13 +15,18 @@
 	"require": {
 		"silverstripe/admin": "^1.10"
 	},
-	"autoload": {
-        "psr-4": {"MadeHQ\\": "code/"}
+    "autoload": {
+        "psr-4": {
+            "MadeHQ\\ColourPicker\\": "code/"
+        }
     },
     "extra": {
         "expose": [
             "client/dist"
         ]
+    },
+    "config": {
+        "discard-changes": true
     },
     "prefer-stable": true,
     "minimum-stability": "dev"

@@ -4,7 +4,7 @@ Name: silverstripe-colourpicker
 
 SilverStripe\Core\Injector\Injector:
   Colour:
-    class: MadeHQ\FieldType\DBColour
+    class: MadeHQ\ColourPicker\FieldType\DBColour
 
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:

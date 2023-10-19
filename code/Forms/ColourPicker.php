@@ -1,9 +1,9 @@
 <?php
 
-namespace MadeHQ\FieldType;
+namespace MadeHQ\ColourPicker\FieldType;
 
 use SilverStripe\ORM\FieldType\DBVarchar;
-use MadeHQ\Forms\ColourPicker;
+use MadeHQ\ColourPicker\Forms\ColourPicker;
 
 class DBColour extends DBVarchar
 {
