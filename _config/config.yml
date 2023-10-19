@@ -8,8 +8,8 @@ SilverStripe\Core\Injector\Injector:
 
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:
-    - 'madehq/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.min.js'
-    - 'madehq/silverstripe-colourpicker:client/dist/javascript/colourpicker.js'
+    - 'mademedia/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.min.js'
+    - 'mademedia/silverstripe-colourpicker:client/dist/javascript/colourpicker.js'
   extra_requirements_css:
-    - 'madehq/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.css'
-    - 'madehq/silverstripe-colourpicker:client/dist/css/colourpicker.css'
+    - 'mademedia/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.css'
+    - 'mademedia/silverstripe-colourpicker:client/dist/css/colourpicker.css'
