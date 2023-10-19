@@ -1,0 +1,15 @@
+---
+Name: silverstripe-colourpicker
+---
+
+SilverStripe\Core\Injector\Injector:
+  Colour:
+    class: MadeHQ\FieldType\DBColour
+
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_javascript:
+    - 'madehq/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.min.js'
+    - 'madehq/silverstripe-colourpicker:client/dist/javascript/colourpicker.js'
+  extra_requirements_css:
+    - 'madehq/silverstripe-colourpicker:client/dist/thirdparty/jquery-minicolors/jquery.minicolors.css'
+    - 'madehq/silverstripe-colourpicker:client/dist/css/colourpicker.css'
