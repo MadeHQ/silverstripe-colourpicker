@@ -1,11 +1,21 @@
 <?php
 
-class Colour extends Varchar
+use SilverStripe\ORM\FieldType\DBVarchar;
+
+class Colour extends DBVarchar
 {
     public function __construct($name = null, $options = array())
     {
         parent::__construct($name, 7, $options);
     }
+
+	/**
+	 * (non-PHPdoc)
+	 * @see DBField::scaffoldFormField()
+	 */
+	public function scaffoldFormField($title = null, $params = null) {
+		return new ColourPicker($this->name, $title);
+	}
 
     public function getHash()
     {
