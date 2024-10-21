@@ -13,8 +13,8 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.2",
-		"silverstripe/cms": ">=3.1"
+		"php": ">=8",
+		"silverstripe/cms": ">=5"
 	},
 	"target-dir": "colourpicker",
     "extra": {

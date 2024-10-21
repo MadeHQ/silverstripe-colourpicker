@@ -1,4 +1,8 @@
 <?php
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\View\Requirements;
+
 /**
  * Colour input field.
  * 
