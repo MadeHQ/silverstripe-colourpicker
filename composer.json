@@ -17,6 +17,11 @@
 		"silverstripe/cms": ">=5"
 	},
 	"extra": {
-		"installer-name": "colourpicker"
+		"installer-name": "colourpicker",
+		"expose": [
+			"css",
+			"javascript",
+			"thirdparty"
+		]
 	}
 }
