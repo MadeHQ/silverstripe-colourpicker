@@ -1,61 +1,45 @@
 <?php
 
-namespace MadeHQ\ColourPicker\FieldType;
+namespace MadeHQ\ColourPicker\Forms;
 
-use SilverStripe\ORM\FieldType\DBVarchar;
-use MadeHQ\ColourPicker\Forms\ColourPicker;
+use SilverStripe\Forms\TextField;
+use SilverStripe\View\Requirements;
 
-class DBColour extends DBVarchar
+/**
+ * Colour input field.
+ *
+ * @package forms
+ * @subpackage fields-formattedinput
+ */
+class ColourPicker extends TextField
 {
-
-    private static $casting = array(
-        'Hash' => 'Text',
-        'Red' => 'Text',
-        'Blue' => 'Text',
-        'Green' => 'Text',
-    );
-
-    public function __construct($name = null, $options = array())
+    public function __construct($name, $title = null, $value = '', $form = null)
     {
-        parent::__construct($name, 7, $options);
+        parent::__construct($name, $title, $value, 7, $form);
+
+        $this->addExtraClass("text");
     }
 
-    /**
-     * (non-PHPdoc)
-     * @see DBField::scaffoldFormField()
-     */
-    public function scaffoldFormField($title = null, $params = null)
+    public function Field($properties = array())
     {
-        return new ColourPicker($this->name, $title);
+        $this->addExtraClass("colourpickerinput");
+
+        Requirements::javascript('mademedia/silverstripe-colourpicker: client/dist/thirdparty/jquery-minicolors/jquery.minicolors.min.js');
+        Requirements::css('mademedia/silverstripe-colourpicker: client/dist/thirdparty/jquery-minicolors/jquery.minicolors.css');
+
+        Requirements::css('mademedia/silverstripe-colourpicker: client/dist/css/colourpicker.css');
+        Requirements::javascript('mademedia/silverstripe-colourpicker: client/dist/javascript/colourpicker.js');
+
+        return parent::Field($properties);
     }
 
-    public function getHash()
+    public function validate($validator)
     {
-        return substr($this->value, 1);
-    }
+        if (!empty($this->value) && !preg_match("/^#?([a-f0-9]{3}$)|([a-f0-9]{6}$)/i", $this->value)) {
+            $validator->validationError($this->name, _t("ColourPicker.VALIDCOLOURFORMAT", "Please enter a valid color in hexadecimal format."), "validation", false);
+            return false;
+        }
 
-    public function getRGB()
-    {
-        $hash = $this->getHash();
-        return array(
-            'R' => hexdec(substr($hash, 0, 2)),
-            'G' => hexdec(substr($hash, 2, 2)),
-            'B' => hexdec(substr($hash, 4, 2)),
-        );
-    }
-
-    public function getRed()
-    {
-        return $this->getRGB()['R'];
-    }
-
-    public function getBlue()
-    {
-        return $this->getRGB()['B'];
-    }
-
-    public function getGreen()
-    {
-        return $this->getRGB()['G'];
+        return true;
     }
 }

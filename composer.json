@@ -22,7 +22,8 @@
     },
     "extra": {
         "expose": [
-            "client/dist"
+            "client/dist",
+            "thirdparty"
         ]
     },
     "config": {
