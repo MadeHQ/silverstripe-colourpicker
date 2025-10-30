@@ -5,7 +5,7 @@ use SilverStripe\View\Requirements;
 
 /**
  * Colour input field.
- * 
+ *
  * @package forms
  * @subpackage fields-formattedinput
  */
@@ -22,11 +22,11 @@ class ColourPicker extends TextField
     {
         $this->addExtraClass("colourpickerinput");
 
-        Requirements::javascript("ninty9notout/colourpicker:thirdparty/jquery-minicolors/jquery.minicolors.min.js");
-        Requirements::css("ninty9notout/colourpicker:thirdparty/jquery-minicolors/jquery.minicolors.css");
+        Requirements::javascript("mademedia/colourpicker:thirdparty/jquery-minicolors/jquery.minicolors.min.js");
+        Requirements::css("mademedia/colourpicker:thirdparty/jquery-minicolors/jquery.minicolors.css");
 
-        Requirements::css("ninty9notout/colourpicker:css/colourpicker.css");
-        Requirements::javascript("ninty9notout/colourpicker:javascript/colourpicker.js");
+        Requirements::css("mademedia/colourpicker:css/colourpicker.css");
+        Requirements::javascript("mademedia/colourpicker:javascript/colourpicker.js");
 
         return parent::Field($properties);
     }
